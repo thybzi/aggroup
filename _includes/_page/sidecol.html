@@ -1,0 +1,9 @@
+{% if page.sidecol_title %}<h1>{{ page.sidecol_title }}</h1>{% endif %}
+<div class="content-left"><div class="content-right"><div class="content-inner">
+
+{% case page.sidecol_content %}
+{% when "news" %}{% include sidecol_news.html %}
+{% else %}{{ page.sidecol_content }}
+{% endcase %}
+
+</div></div></div>

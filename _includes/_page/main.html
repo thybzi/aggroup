@@ -1,0 +1,55 @@
+{% capture devnull %}
+    {% capture breadcrumbs_raw %}{% include _helpers/breadcrumbs.html %}{% endcapture %}
+    {% assign breadcrumbs = breadcrumbs_raw | split:"|" %}
+    {% if breadcrumbs.size > 2 %}
+        {% assign is_nested = true %}
+    {% else %}
+        {% assign is_nested = false %}
+    {% endif %}
+
+    {% if page.page_title %}
+        {% assign current_title = page.page_title %}
+    {% else %}
+        {% assign current_title = page.title %}
+    {% endif %}
+
+    {% if is_nested %}
+        {% assign parent_level = breadcrumbs.size | minus:2 %}
+        {% assign parent_url = breadcrumbs[parent_level] | split:"~" | first %}
+        {% assign page_title = breadcrumbs[parent_level] | split:"~" | last %}
+        {% assign page_subtitle = current_title %}
+        {% if page.date %}
+            {% assign date = page.date | date:"%d.%m.%Y" %}
+            {% assign page_subtitle = page_subtitle | replace:"%DATE%",date %}
+        {% endif %}
+    {% else %}
+        {% assign page_title = current_title %}
+    {% endif %}
+
+    {% assign source_type = page.path | split:"." | last %}
+    {% case source_type %}
+        {% when "md" %}{% capture page_content %}{% include _helpers/linebreaks.html input=content %}{% endcapture %}
+        {% else %}{% assign page_content = content %}
+    {% endcase %}
+{% endcapture %}{% assign devnull = nil %}
+
+<h1>{{ page_title }}</h1>
+<div class="content-left"><div class="content-right"><div class="content-inner">
+
+<a id="main"></a>
+
+{% if page_subtitle %}<h2>{{ page_subtitle }}</h2>{% endif %}
+{% if page.author %}<p><strong>{{ page.author }}</strong></p>{% endif %}
+
+{{ page_content }}
+
+{% if page.images %}
+{% assign subdir = page.path | split:"/" | last | split:"." | first %}
+{% include gallery.html images=page.images subdir=subdir %}
+{% endif %}
+
+{% if is_nested %}
+<p>(<a href="{{ site.baseurl }}{{ parent_url }}" onclick="history.back(); return false" title="Вернуться к предыдущей странице">назад</a>)</p>
+{% endif %}
+
+</div></div></div>

@@ -1,0 +1,24 @@
+{% include _page/top.html %}
+
+{% include menu.html %}
+
+
+{% if page.sidecol_content %}
+
+<div id="content-wide-bottom">
+{% include _page/main.html %}
+</div>
+
+<div id="content-narrow-bottom">
+{% include _page/sidecol.html %}
+</div>
+
+{% else %}
+
+<div id="content-full-bottom">
+{% include _page/main.html %}
+</div>
+
+{% endif %}
+
+{% include _page/bottom.html %}

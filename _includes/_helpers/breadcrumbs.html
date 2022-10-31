@@ -1,0 +1,7 @@
+{% capture devnull %}
+    {% assign breadcrumbs = site.root_breadcrumb %}
+    {% if page.section_breadcrumb %}
+        {% assign breadcrumbs = breadcrumbs | append:"|" | append:page.section_breadcrumb %}
+    {% endif %}
+    {% assign breadcrumbs = breadcrumbs | append:"|" | append:page.url | append:"~" | append:page.title %}
+{% endcapture %}{{ breadcrumbs }}

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ru">
+{% include _head.html %}
+<body>
+<div class="the-mainest">
+    {% include navbar.html %}
+    {% include menu-fixed.html is_home=page.is_home %}
+
+    {{ page.content }}
+
+    <div class="empty-footer"></div>
+    {% include footer.html %}
+</div>
+{% include _bottom.html %}
+</body>
+</html>

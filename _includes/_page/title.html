@@ -1,0 +1,9 @@
+{% capture devnull %}
+{% capture breadcrumbs_raw %}{% include _helpers/breadcrumbs.html %}{% endcapture %}
+{% assign items = breadcrumbs_raw | split:"|" %}
+{% assign last_item_url = items | last | split:"~" | first %}
+{% if last_item_url == "/" %}
+    {% assign items = "/~Fort Royal" %}
+{% endif %}
+{% endcapture %}
+<title>{% for item in items %}{{ item | split:"~" | last }}{% unless forloop.last %} | {% endunless %}{% endfor %}</title>
