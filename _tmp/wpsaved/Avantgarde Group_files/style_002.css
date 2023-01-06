@@ -1,0 +1,77 @@
+html {
+  height: 100%;  
+}
+body {
+  min-height: 100%;
+}
+
+.the-mainest {
+  min-height: calc(100vh - 50px) !important;
+}
+
+.navbar-brand>img {
+  position: absolute;
+  top: 14px;
+  left: 12px;
+  z-index: 10;
+  width: 110px;
+}
+
+.menu-fixed.menu-home .top-container {
+  box-shadow: none;
+}
+
+
+.about-us-inside-bottom .partners-hidden .partners-row ul li
+{
+    min-height: 17px;
+    display: block;
+    position: relative;
+    padding-left: 71px;
+    margin-bottom: 10px;
+}
+.about-us-inside-bottom .partners-hidden .partners-row ul li:before {
+    content: "";
+    background: url(images/troffer.png) no-repeat;
+    width: 11px;
+    height: 17px;
+    position: absolute;
+    left: 20px;
+    top: 3px;
+}
+
+.project-slide-con .image-con {
+  height: 270px;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 780px) {
+  .tabs-container .tab-content .left-block {
+    padding-top: 10px;
+  }
+
+  .tabs-container .tab-content .left-block:after {
+    width: 100% !important;
+    height: 3px !important;
+  }
+
+  .tabs-container .tab-content .left-block {
+    min-height: 100px !important;
+  }
+
+  .tabs-container .tab-content .download {
+    margin-top: 10px !important;
+  }
+
+  .about-us-inside .container {
+    padding-top: 50px !important;
+  }
+
+  .about-us-inside-bottom .partners-hidden .partners-row .btn {
+    margin-bottom: 30px !important;
+  }
+}
+
+.slider-section .text:before, .slider-section .text:after, .slider-section .mainest-button {
+display:none;
+}
