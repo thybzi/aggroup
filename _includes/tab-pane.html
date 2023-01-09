@@ -1,6 +1,6 @@
-<div role="tabpanel" class="tab-pane {% if include.is_active %}active{% endif %} fade {% if include.is_active %}in{% endif %}" id="{{} if include.id }}">
+<div role="tabpanel" class="tab-pane {% if include.is_active %}active{% endif %} fade {% if include.is_active %}in{% endif %}" id="{{ include.id }}">
     <div class="text">
-        <p><img loading="lazy" class="size-full aligncenter" src="{{ include.image }} 768w" sizes="(max-width: 790px) 100vw, 790px" width="790" height="276"></p>
+        <p><img loading="lazy" class="size-full aligncenter" src="{{ site.baseurl }}/assets/{{ include.image }}" alt="" srcset="{{ site.baseurl }}/assets/{{ include.image_790 }} 768w" sizes="(max-width: 790px) 100vw, 790px" width="790" height="276"></p>
         <h2>{{ include.title }}</h2>
         {{ include.text }}
     </div>

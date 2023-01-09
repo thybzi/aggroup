@@ -3,65 +3,37 @@
 </div>
 
 <div class="row partners-row partners-row-main">
-    <div class="col-md-6">
-        <div class="row">
-            <div class="col-md-6">
-                <div class="image-con">
-                    <img src="Avantgarde%20Group%20%C2%BB%20%D0%9E%20%D0%BD%D0%B0%D1%81_files/partn1.png" class="attachment-full size-full wp-post-image" alt="" loading="lazy" srcset="Avantgarde%20Group%20%C2%BB%20%D0%9E%20%D0%BD%D0%B0%D1%81_files/partn1.png 260w, Avantgarde%20Group%20%C2%BB%20%D0%9E%20%D0%BD%D0%B0%D1%81_files/partn1-201x300.png 201w" sizes="(max-width: 260px) 100vw, 260px" width="260" height="389">
-                </div>
-            </div>
-            <div class="col-md-6">
-                <h2 class="popular-title">РУСЛАН МУХАМЕДОВ</h2>
-                <div class="text">
-                    <p>Юрист, имеет более чем 10-летний опыт оказания консультационных услуг в сфере энергетики и недропользования</p>
-                </div>
-                <div class="t phone">+7 701 999 96 74</div>
-                <div class="t mail">ruslan@ag-group.kz</div>
-                <div class="btn open" res="0">Трудовой опыт</div>
-            </div>
-        </div>
-    </div>
 
-    <div class="col-md-6">
-        <div class="row">
-            <div class="col-md-6">
-                <div class="image-con">
-                    <img src="Avantgarde%20Group%20%C2%BB%20%D0%9E%20%D0%BD%D0%B0%D1%81_files/dfghjkkjhgfdcfgbhn.jpg" class="attachment-full size-full wp-post-image" alt="" loading="lazy" srcset="Avantgarde%20Group%20%C2%BB%20%D0%9E%20%D0%BD%D0%B0%D1%81_files/dfghjkkjhgfdcfgbhn.jpg 260w, Avantgarde%20Group%20%C2%BB%20%D0%9E%20%D0%BD%D0%B0%D1%81_files/dfghjkkjhgfdcfgbhn-201x300.jpg 201w" sizes="(max-width: 260px) 100vw, 260px" width="260" height="389">
-                </div>
-            </div>
-            <div class="col-md-6">
-                <h2 class="popular-title">ЖАНАТ МУСАБАЕВ</h2>
-                <div class="text">
-                    <p>Экономист, имеет более чем 10-летний опыт оказания услуг в сфере налогообложения недропользователей и финансового анализа</p>
-                </div>
-                <div class="t phone">+7 701 981 83 80</div>
-                <div class="t mail">zhanat@ag-group.kz</div>
-                <div class="btn open" res="1">Трудовой опыт</div>
-            </div>
-        </div>
-    </div>
+    {%
+        include _partners-main-item.html
+        image="partn1.png"
+        image_small="partn1-201x300.png"
+        name="РУСЛАН МУХАМЕДОВ"
+        description="Юрист, имеет более чем 10-летний опыт оказания консультационных услуг в сфере энергетики и недропользования"
+        phone="+7 701 999 96 74"
+        email="ruslan@ag-group.kz"
+        block_id="0"
+    %}
+
+    {%
+        include _partners-main-item.html
+        image="dfghjkkjhgfdcfgbhn.jpg"
+        image_small="dfghjkkjhgfdcfgbhn-201x300.jpg"
+        name="ЖАНАТ МУСАБАЕВ"
+        description="Экономист, имеет более чем 10-летний опыт оказания услуг в сфере налогообложения недропользователей и финансового анализа"
+        phone="+7 701 981 83 80"
+        email="zhanat@ag-group.kz"
+        block_id="1"
+    %}
+
 </div>
 
 <div class="partners-hidden">
+
+
+
     <div class="row partners-row" res="0">
-        <div class="col-md-6">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="image-con">
-                        <img src="Avantgarde%20Group%20%C2%BB%20%D0%9E%20%D0%BD%D0%B0%D1%81_files/partn1.png" class="attachment-full size-full wp-post-image" alt="" loading="lazy" srcset="Avantgarde%20Group%20%C2%BB%20%D0%9E%20%D0%BD%D0%B0%D1%81_files/partn1.png 260w, Avantgarde%20Group%20%C2%BB%20%D0%9E%20%D0%BD%D0%B0%D1%81_files/partn1-201x300.png 201w" sizes="(max-width: 260px) 100vw, 260px" width="260" height="389">
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <h2 class="popular-title">РУСЛАН МУХАМЕДОВ</h2>
-                    <div class="text">
-                        <p>Юрист, имеет более чем 10-летний опыт оказания консультационных услуг в сфере энергетики и недропользования</p>
-                    </div>
-                    <div class="t phone">+7 701 999 96 74</div>
-                    <div class="t mail">ruslan@ag-group.kz</div>
-                    <div class="btn close-row">назад</div>
-                </div>
-            </div>
-        </div>
+        {% capture details %}
         <div class="col-md-6">
             <div id="accordion" class="panel-group accordion">
                 <div class="panel panel-default">
@@ -171,24 +143,20 @@
                 месторождениям и др.
             </p>
         </div>
+        {% endcapture %}
+        {%
+            include _partners-main-item.html
+            image="partn1.png"
+            image_small="partn1-201x300.png"
+            name="РУСЛАН МУХАМЕДОВ"
+            description="Юрист, имеет более чем 10-летний опыт оказания консультационных услуг в сфере энергетики и недропользования"
+            phone="+7 701 999 96 74"
+            email="ruslan@ag-group.kz"
+            details=details
+        %}
     </div>
     <div class="row partners-row" res="1">
-        <div class="col-md-6">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="image-con"><img src="Avantgarde%20Group%20%C2%BB%20%D0%9E%20%D0%BD%D0%B0%D1%81_files/dfghjkkjhgfdcfgbhn.jpg" class="attachment-full size-full wp-post-image" alt="" loading="lazy" srcset="Avantgarde%20Group%20%C2%BB%20%D0%9E%20%D0%BD%D0%B0%D1%81_files/dfghjkkjhgfdcfgbhn.jpg 260w, Avantgarde%20Group%20%C2%BB%20%D0%9E%20%D0%BD%D0%B0%D1%81_files/dfghjkkjhgfdcfgbhn-201x300.jpg 201w" sizes="(max-width: 260px) 100vw, 260px" width="260" height="389"></div>
-                </div>
-                <div class="col-md-6">
-                    <h2 class="popular-title">ЖАНАТ МУСАБАЕВ</h2>
-                    <div class="text">
-                        <p>Экономист, имеет более чем 10-летний опыт оказания услуг в сфере налогообложения недропользователей и финансового анализа</p>
-                    </div>
-                    <div class="t phone">+7 701 981 83 80</div>
-                    <div class="t mail">zhanat@ag-group.kz</div>
-                    <div class="btn close-row">назад</div>
-                </div>
-            </div>
-        </div>
+        {% capture details %}
         <div class="col-md-6">
             <ul>
                 <li>
@@ -214,5 +182,16 @@
                 </li>
             </ul>
         </div>
+        {% endcapture %}
+        {%
+            include _partners-main-item.html
+            image="dfghjkkjhgfdcfgbhn.jpg"
+            image_small="dfghjkkjhgfdcfgbhn-201x300.jpg"
+            name="ЖАНАТ МУСАБАЕВ"
+            description="Экономист, имеет более чем 10-летний опыт оказания услуг в сфере налогообложения недропользователей и финансового анализа"
+            phone="+7 701 981 83 80"
+            email="zhanat@ag-group.kz"
+            block_id="1"
+        %}
     </div>
 </div>
