@@ -1,0 +1,46 @@
+html {
+    min-height: 100%;
+}
+
+body {
+    position: relative;
+    font-family: Arial, "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
+    background: url(bg.jpg) 50% 50% no-repeat;
+    background-size: cover;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.main {
+    width: 900px;
+    margin: 0 auto;
+}
+
+h1 {
+    color: #a0967f;
+    font-size: 90px;
+    font-weight: 900;
+}
+
+h2 {
+    font-size: 46px;
+    margin-top: 160px;
+}
+
+.message {
+    font-size: 20px;
+    margin-top: 50px;
+    border-bottom: 1px solid;
+    padding-bottom: 40px;
+}
+
+.contacts-item {
+    width: 33%;
+    float: left;
+    color: #555;
+    font-size: 24px;
+}
+
