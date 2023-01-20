@@ -1,0 +1,9 @@
+@import '_font.css';
+
+:root {
+    --t_1825: 400 18px/25px var(--f_base) ;
+    --t_2432: 400 24px/32px var(--f_base);
+    --t_3640: 700 36px/40px var(--f_base);
+    --t_3651: 500 36px/51px var(--f_base);
+    --t_92101: 900 92px/101px var(--f_base);
+}

@@ -1,0 +1,84 @@
+@import '_color.css';
+@import 'langSwitch.css';
+@import 'section.css';
+
+
+:root {
+    --header__widthMax: var(--section__widthMax);
+    --header__padX: var(--section__padX);
+    --header__top__height: var(--langSwitch__height);
+    --header__menuItem__padX: 48px;
+    --header__menuItem__padY: 16px;
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    box-sizing: border-box;
+    max-width: var(--header__widthMax);
+    height: 135px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+    padding-left: var(--section__padX);
+    padding-right: var(--section__padX);
+}
+
+.header__top {
+    position: relative;
+    height: var(--header__top__height);
+}
+
+.header__topLeft {
+    display: flex;
+    position: absolute;
+    left: 0;
+}
+
+.header__topLeftItem + .header__topLeftItem {
+    margin-left: 40px;
+}
+
+.header__topRight {
+    display: flex;
+    position: absolute;
+    right: 0;
+}
+
+.header__menu {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__menuWing {
+    display: flex;
+}
+
+.header__menuItem {
+    position: relative;
+    padding-top: var(--header__menuItem__padY);
+    padding-bottom: var(--header__menuItem__padY);
+}
+
+.header__menuItem:not(:first-child) {
+    padding-left: var(--header__menuItem__padX);
+}
+
+.header__menuItem:not(:first-child)::before {
+    content: '';
+    position: absolute;
+    left: -1px;
+    top: 21px;
+    height: 15px;
+    width: 1px;
+    border-style: solid;
+    border-color: var(--c_c9c9c9);
+    border-width: 0 1px;
+
+    background: var(--c_333333);
+}
+
+.header__menuItem:not(:last-child) {
+    padding-right: var(--header__menuItem__padX);
+}

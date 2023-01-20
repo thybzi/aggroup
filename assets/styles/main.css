@@ -1,0 +1,7 @@
+@import 'main/__reset.css';
+@import 'main/_color.css';
+@import 'main/_font.css';
+@import 'main/_typography.css';
+@import 'main/header.css';
+@import 'main/langSwitch.css';
+@import 'main/section.css';

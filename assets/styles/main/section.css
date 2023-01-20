@@ -1,0 +1,68 @@
+:root {
+    --section__widthMax: 1170px;
+    --section__padX: 16px;
+}
+
+.section {
+    box-sizing: border-box;
+    max-width: var(--section__widthMax);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--section__padX);
+    padding-right: var(--section__padX);
+}
+
+.section + .section {
+    margin-top: 32px;
+}
+
+.section:last-child {
+    margin-bottom: 48px;
+}
+
+.section__title {
+    font: var(--t_3640);
+    color: var(--c_a0967f);
+}
+
+.section__preamble {
+    margin-top: 15px;
+    font: var(--t_1825);
+    color: var(--c_333333);
+}
+
+.section__subtitle {
+    font: var(--t_2432);
+    color: var(--c_333333);
+    margin-top: 20px;
+}
+
+.section__list {
+    margin-top: 15px;
+}
+
+.section__text {
+    margin-top: 10px;
+    font: var(--t_1825);
+    color: var(--c_333333);
+}
+
+.section__list > li {
+    position: relative;
+    padding-left: 16px;
+    margin-left: 10px;
+    font: var(--t_1825);
+    color: var(--c_646464);
+}
+
+.section__list > li + li {
+    margin-top: 4px;
+}
+
+.section__list > li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--c_c20d19);
+}

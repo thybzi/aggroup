@@ -1,0 +1,7 @@
+:root {
+    --langSwitch__height: 33px;
+}
+
+.langSwitch {
+    height: var(--langSwitch__height);
+}
